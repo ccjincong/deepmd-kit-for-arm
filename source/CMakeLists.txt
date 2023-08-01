@@ -166,7 +166,11 @@ option(ENABLE_NATIVE_OPTIMIZATION "Enable native optimization" OFF)
 if(ENABLE_NATIVE_OPTIMIZATION)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native -mtune=native")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mtune=native")
+  
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=armv8.2-a -mtune=tsv110")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=armv8.2-a -mtune=tsv110")
 endif()
+
 
 # define names of libs
 set(LIB_DEEPMD "deepmd")
